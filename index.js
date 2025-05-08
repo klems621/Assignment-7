@@ -82,7 +82,7 @@ app.patch("/item-details/:id", async (req, res) => {
   const { description } = req.body;
   const { claimed } = req.body;
 
-  const existingItem = await Product.findById(id);
+  const existingItem = await Item.findById(id);
 
   if (existingItem) {
     existingItem.description = description;
